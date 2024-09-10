@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--head consists of meta tags, title and link for external CSS-->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keyword" content="Printer Haus, feedback, form" />
+    <meta
+      name="description"
+      content="Fill this form to help us improve as your satisfaction is our top most priority."
+    />
+    <title>Feedback Form - Printer Haus</title>
+    <!--external CSS-->
+    <link rel="stylesheet" href="Main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!--font for company's description-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /*CSS for Feedback Form*/
+      
+      /*sets margin 0 for body*/
+      .feedback_view {
+        margin: 0;
+      }
+      
+      /* styles for div class="feedback" */
+      .feedback {
+        padding: 10px;
+        text-align: center;
+        background-color: lightblue;
+        min-height: 850px;
+        min-width: 1000px;
+      }
+      
+      /*styles for heading*/
+      .feedback h1 {
+        padding: 10px;
+        font-size: 50px;
+        margin-bottom: 50px;
+      }
+      
+      /*sets space between border and content,
+        space outside the border,
+        border size and color,
+        and makes edges of border curved for text inputs and submit button*/
+      .input,
+      .submit_button {
+        padding: 10px 20px;
+        margin: 10px;
+        border: 1px solid lightslategray;
+        border-radius: 10px;
+      }
+      
+      /*sets background color, text color and make text bold for submit button*/
+      .submit_button {
+        background-color: cornflowerblue;
+        color: white;
+        font-weight: bold;
+      }
+      
+      /*sets space outside the radio input*/
+      .radio {
+        margin: 10px;
+      }
+      
+      /*styles the form's height, width, text alignment, background color, font color, size, weight, shadow, margin and padding*/
+      .formlayout {
+        min-height: 600px;
+        min-width: 600px;
+        padding: 20px;
+        text-align: left;
+        background-color: white;
+        box-shadow: 0 2px 7px 5px lightslategray;
+        margin: 0px 300px;
+        color: black;
+        font-weight: bold;
+        font-size: 15px;
+      }
+      
+      /*changes background color and border color of inputs when you mouse over it */
+      .input:hover {
+        background-color: aliceblue;
+        border-color: black;
+      }
+      
+      /*changes background color of submit button when you mouse over it */
+      .submit_button:hover {
+        background-color: royalblue;
+      }
+      
+      /*firstname_layout and lastname_layout will appear side by side*/
+      .name_layout {
+        display: flex;
+      }
+      
+      /*both div will occupy 50% space of div class="name_layout"*/
+      .firstname_layout,
+      .lastname_layout {
+        flex: 50%;
+      }
+      
+      /*radio_gender and radio_rate will appear side by side*/
+      .radio_layout {
+        display: flex;
+      }
+      
+      /*both div will occupy 50% space of div class="radio_layout"*/
+      .radio_gender,
+      .radio_rate {
+        flex: 50%;
+      }
+      
+      /*aligns text to center of submit button*/
+      .submit_layout {
+        text-align: center;
+      }
+      
+      /*textarea_layout and feedback image will appear side by side*/
+      .textarea_image {
+        display: flex;
+      }
+      
+      /*both div will occupy 50% space of div class="textarea_image"*/
+      .textarea_layout,
+      .feedbackimage {
+        flex: 50%;
+      }
+      
+      /*email_layout and rank_layout will appear side by side*/
+      .email_rank {
+        display: flex;
+      }
+      
+      /*both div will occupy 50% space of div class="email_rank"*/
+      .email_layout,
+      .rank_layout {
+        flex: 50%;
+      }
+      nav {
+        width: 100%px;
+        height: 51px;
+        background-color: #4d243d;
+        border: #4d243d solid;
+        border-radius: 3px;
+      }
+      .nav_div {
+        margin-left: auto;
+        margin-right: auto;
+        width: 1300px;
+        display: flex;
+        height: 55px;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .LOGO {
+        color: #cccdce;
+        font-family: "Roboto Slab", serif;
+        font-size: 21px;
+      }
+      .nav_icons_div {
+        width: 25px;
+        height: 35px;
+      }
+      .icons {
+        display: flex;
+      }
+      .nav_icons {
+        color: #cccdce;
+      }
+      .nav_icons_div:hover {
+        background-color: #3a3a3a;
+        transition: 0.3s ease;
+      }
+      .nav_links {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .nav_links li {
+        list-style: none;
+        padding: 6px 20px 8px 20px;
+        border-radius: 15px;
+      }
+      
+      #link {
+        color: 242424;
+        font-family: "Oxygen", sans-serif;
+        text-decoration: none;
+        font-size: 12.5px;
+        color: #cccdce;
+      }
+      
+      .nav_links li:hover {
+        background-color: #3a3a3a;
+        transition: 0.25s ease;
+      }
+      .nav_links li:hover #link {
+        color: #fff;
+        transition: 0.25s ease;
+      }
+      /*CSS for footer*/
+      .footer_container {
+        width: 1170px;
+        margin-left: auto;
+      }
+      
+      .footer_sections {
+        display: flex;
+      }
+      .homepage_footer {
+        background-color: #4d243d;
+        height: 335px;
+        width: 100%;
+        border-style: solid;
+        border-color: #4d243d;
+        border-radius: 5px;
+      }
+      
+      .homepage_footer ul {
+        list-style: none;
+        padding: 10px;
+      }
+      .footer_col {
+        padding: 75px;
+      }
+      
+      .footer_col h3 {
+        text-transform: capitalize; /*Capitalizaes the first letter of the text in h3 element*/
+        font-size: 21px;
+        color: #fff;
+        font-family: "Playfair Display", serif;
+      }
+      
+      .footer_col ul li a {
+        font-size: 17px;
+        text-transform: capitalize;
+        color: white;
+        padding: 0px 0px 10px;
+      }
+      .footer_col ul li a:hover {
+        color: blue;
+        padding-left: 10px;
+        transition: 0.5s;
+      }
+      
+      .footer_col .copyright {
+        color: white;
+        text-align: justify;
+        font-family: "PT Sans Caption", sans-serif;
+      }
+      
+        </style>
+      
+  </head>
+
+
+  <!--body consists of a validation form that asks for input-->
+
+  <body class="feedback_view">
+      <!--code for header-->
+  <header>
+    <!--Code for navbar-->
+    <nav>
+      <!--div container of the whole navbar -->
+      <div class="nav_div">
+        <!--name of our logo-->
+        <h1 class="LOGO">Printer Haus</h1>
+        <!--nav links in unordered list-->
+        <ul class="nav_links">
+          
+          <li>
+            <a href="../Homepage&Research_page/index.html" class="home" id="link" target="blank">Home</a>
+          </li>
+          <li>
+            <a href="../Product_page/indexx.html" class="products" id="link" target="blank">Products</a>
+          </li>
+          <li><a href="../Blog_page/Blog.html" class="blog" id="link" targe="blank">Blog</a></li>
+          <li>
+            <a href="../Homepage&Research_page/research.html" class="research" id="link" target="blank"
+              >Research</a
+            >
+          </li>
+          <li>
+            <a href="../AboutUs&feedback_page/aboutUs.html" class="aboutUs" id="link" target="blank"
+              >About us</a
+            >
+          </li>
+          <li>
+            <a href="../AboutUs&feedback_page/feedbackpage.html" class="contact" id="link" target="blank">Contact</a>
+          </li>
+        </ul>
+        <div class="icons">
+            <!--continer for icons in the navbar-->
+            <div class="nav_icons_div">
+              <img src="../Homepage&Research_page/Images/icons/search_icon.png" style = " width: 30px;
+              height: 35px">
+            </div>
+      
+            <div class="nav_icons_div">
+              <img src="../Homepage&Research_page/Images/icons/cart.png" style = " width: 30px;
+              height: 35px">
+            </div> 
+        </div>
+      </div>
+    </nav>
+  </header>
+    <!--this div contains a heading and another div within it-->
+    <div class="feedback">
+      <h1>Fill this form to help us improve.</h1>
+      <!--this div consists of the validation form-->
+      <div class="formlayout">
+        <form name="messageForm" onsubmit="validateForm()">
+          <!--this div has two div within it-->
+          <div class="name_layout">
+            <!--asks for first name as input in text-->
+            <div class="firstname_layout">
+              <p>
+                First name:<input type="text" name="firstname" class="input" />
+              </p>
+            </div>
+            <!--asks for last name as input in text-->
+            <div class="lastname_layout">
+              <p>
+                Last name:<input type="text" name="lastname" class="input" />
+              </p>
+            </div>
+          </div>
+          <!--this div has two div within it-->
+          <div class="email_rank">
+            <!--asks for email as input in email-->
+            <div class="email_layout">
+              <p>Email:<input type="email" name="email" class="input" /></p>
+            </div>
+            <!--asks for a number from 0 to 10 as input -->
+            <div class="rank_layout">
+              <p>
+                Rank your satisfaction level:
+                <input
+                  type="number"
+                  name="rank"
+                  min="0"
+                  max="10"
+                  class="input"
+                  placeholder="(0-10)"
+                />
+              </p>
+            </div>
+          </div>
+          <!--this div has two div within it-->
+          <div class="radio_layout">
+            <!--asks to choose a gender using radio input-->
+            <div class="radio_gender">
+              <p>
+                Gender:<input
+                  type="radio"
+                  class="radio"
+                  name="gender"
+                  value="male"
+                  checked
+                />Male<input
+                  type="radio"
+                  name="gender"
+                  class="radio"
+                  value="female"
+                />Female
+              </p>
+            </div>
+            <!--asks to choose between yes and no using radio input-->
+            <div class="radio_rate">
+              <p>
+                Have you purchased our printer?
+                <input
+                  type="radio"
+                  class="radio"
+                  name="rate"
+                  value="yes"
+                  checked
+                />Yes<input
+                  type="radio"
+                  class="radio"
+                  name="rate"
+                  value="no"
+                />No
+              </p>
+            </div>
+          </div>
+          <!--this div has a textarea and an image-->
+          <div class="textarea_image">
+            <!--asks to write feedback using textarea element having 30 columns and 10 rows-->
+            <div class="textarea_layout">
+              <p>
+                What can we do to improve our service?<br /><textarea
+                  class="input"
+                  name="message"
+                  cols="30"
+                  rows="10"
+                  placeholder="Enter your feedback here"
+                ></textarea>
+              </p>
+            </div>
+            <!--displays an image-->
+            <div class="feedbackimage">
+              <img src="images/formimg.jpg" alt="an image" />
+            </div>
+          </div>
+          <!--this div consists of a submit button-->
+          <div class="submit_layout">
+            <p>
+              <input
+                type="submit"
+                class="submit_button"
+                value="Submit your feedback"
+              />
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!--internal javascript-->
+    <script>
+      //function validateForm is invoked onsubmit
+      function validateForm() {
+        //html elements are accessed using value of input field name
+        var fname = document.forms["messageForm"]["firstname"].value;
+        var lname = document.forms["messageForm"]["lastname"].value;
+        var email = document.forms["messageForm"]["email"].value;
+        var rank = document.forms["messageForm"]["rank"].value;
+        var gender = document.forms["messageForm"]["gender"].value;
+        var rate = document.forms["messageForm"]["rate"].value;
+        var message = document.forms["messageForm"]["message"].value;
+
+        //if any var is empty, a pop up will appear to fill all options
+        if (
+          fname == "" ||
+          lname == "" ||
+          email == "" ||
+          rank == "" ||
+          gender == "" ||
+          rate == ""
+        ) {
+          alert("Empty field found.Please fill all the options.");
+        }
+        //if no var is empty, a pop up will appear and display thank you
+        else {
+          alert(
+            "Thank you for the feedback. We will make sure we address your thoughts."
+          );
+        }
+      }
+    </script>
+    <footer class="homepage_footer">
+      <div class="footer_container">
+        <div class="footer_sections">
+          <div class="footer_col">
+            <h1 class="LOGO">Printer Haus</h1>
+            <hr>
+            <p class="copyright">
+              Our company aims to provide any <br />
+              and every printer that you may<br />
+              have need for, always.<br />
+              <hr>
+              <div style = "color:white; font-family: PT Sans Caption, sans-serif;">
+                &copy;Printer Haus,2024
+              </div>
+            </p>
+          </div>
+
+          <div class="footer_col">
+            <h3>shopping</h3>
+            <ul>
+              <li><a href="../Homepage&Research_page/index.html" id="link">home</a></li>
+              <li><a href="../Product_page/indexx.html" id="link" target="blank">product</a></li>
+            </ul>
+          </div>
+
+          <div class="footer_col">
+            <h3>about us</h3>
+            <ul>
+              <li><a href="../AboutUs&feedback_page/feedbackpage.html" id="link" target="blank">contact</a></li>
+              <li><a href="../AboutUs&feedback_page/aboutUs.html" id="link" target="blank">about us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

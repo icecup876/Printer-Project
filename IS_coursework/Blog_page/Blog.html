@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Printer</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <!-- font for footer-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!--font for company's description-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+    font-family: "Lucida Bright", sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  .container {
+    /* height:50vh; */
+    width: 80%;
+    margin: 20px auto;
+    /* background-color:black; */
+  }
+  
+  .parent1 h1 {
+    font-weight: 700;
+  }
+  
+  .parent1 {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .parent1 .child1 {
+    /* border: 1px solid black; */
+    line-height: 1.5rem;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    text-align: justify;
+  }
+  
+  .child2 {
+    /* border: 1px solid black; */
+    flex: 1;
+  }
+  
+  .printer-img {
+    width: 100%;
+  }
+  
+  .parent2 {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .parent2 .child1 {
+    /* border: 1px solid black; */
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    text-align: justify;
+    width: 50%;
+  }
+  
+  .child2 {
+    /* border: 1px solid black; */
+    flex: 1;
+    text-align: center;
+  }
+  
+  .printer-img {
+    width: 100%;
+  }
+  
+  .parent2 .child2 li {
+    text-align: left;
+  }
+  
+  .parent2 .child2 {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .slider-container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 1.5s ease-in-out;
+  }
+  
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .child2-2 h1 {
+    text-align: center;
+  }
+  
+  .parent2 h1 {
+    margin: 20px;
+  }
+  
+  nav {
+    width: 100%;
+    height: 51px;
+    background-color: #4d243d;
+    border: #4d243d solid;
+    border-radius: 3px;
+  }
+  .nav_div {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1300px;
+    display: flex;
+    height: 55px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .LOGO {
+    color: #cccdce;
+    font-family: "Roboto Slab", serif;
+    font-size: 21px;
+  }
+  .nav_icons_div {
+    width: 25px;
+    height: 35px;
+  }
+  .icons {
+    display: flex;
+    flex-direction: flex-start;
+  }
+  .nav_icons {
+    color: #cccdce;
+  }
+  .nav_icons_div:hover {
+    background-color: #3a3a3a;
+    transition: 0.3s ease;
+  }
+  .nav_links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .nav_links li {
+    list-style: none;
+    padding: 6px 20px 8px 20px;
+    border-radius: 15px;
+  }
+  
+  #link {
+    color: 242424;
+    font-family: "Oxygen", sans-serif;
+    text-decoration: none;
+    font-size: 12.5px;
+    color: #cccdce;
+  }
+  
+  .nav_links li:hover {
+    background-color: #3a3a3a;
+    transition: 0.25s ease;
+  }
+  .nav_links li:hover #link {
+    color: #fff;
+    transition: 0.25s ease;
+  }
+  
+  /*CSS for footer*/
+  .footer_container {
+    width: 1170px;
+    margin-left: auto;
+  }
+  
+  .footer_sections {
+    display: flex;
+  }
+  .homepage_footer {
+    background-color: #4d243d;
+    height: 350px;
+    width: 100%;
+    border-style: solid;
+    border-color: #4d243d;
+    border-radius: 5px;
+  }
+  
+  .homepage_footer ul {
+    list-style: none;
+    padding: 10px;
+  }
+  .footer_col {
+    padding: 75px;
+  }
+  
+  .footer_col h3 {
+    text-transform: capitalize; /*Capitalizaes the first letter of the text in h3 element*/
+    font-size: 21px;
+    color: #fff;
+    font-family: "Playfair Display", serif;
+  }
+  
+  .footer_col ul li a {
+    font-size: 17px;
+    text-transform: capitalize;
+    color: white;
+    padding: 0px 0px 10px;
+  }
+  .footer_col ul li a:hover {
+    color: blue;
+    padding-left: 10px;
+    transition: 0.5s;
+  }
+  
+  .footer_col .copyright {
+    color: white;
+    text-align: justify;
+    font-family: "PT Sans Caption", sans-serif;
+  }
+  
+    </style>
+  </head>
+ 
+  <body>
+    <!--code for header-->
+    <header>
+      <!--Code for navbar-->
+      <nav>
+        <!--div container of the whole navbar -->
+        <div class="nav_div">
+          <!--name of our logo-->
+          <h1 class="LOGO">Printer Haus</h1>
+          <!--nav links in unordered list-->
+          <ul class="nav_links">
+            <li>
+              <a href="../Homepage&Research_page/index.html" class="home" id="link" target="blank"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="../Product_page/indexx.html"
+                class="products"
+                id="link"
+                target="blank"
+                >Products</a
+              >
+            </li>
+            <li>
+              <a
+                href="../Blog_page/Blog.html"
+                class="blog"
+                id="link"
+                target="blank"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a href="../Homepage&Research_page/research.html" class="research" id="link" target="blank"
+                >Research</a
+              >
+            </li>
+            <li>
+              <a
+                href="../AboutUs&feedback_page/aboutUs.html"
+                class="aboutUs"
+                id="link"
+                target="blank"
+                >About us</a
+              >
+            </li>
+            <li>
+              <a
+                href="../AboutUs&feedback_page/feedbackpage.html"
+                class="contact"
+                id="link"
+                target="blank"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <div class="icons">
+            <!--continer for icons in the navbar-->
+            <div class="nav_icons_div">
+              <img
+                src="../Homepage&Research_page/Images/icons/search_icon.png"
+              />
+            </div>
+
+            <div class="nav_icons_div">
+              <img src="../Homepage&Research_page/Images/icons/cart.png" />
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="parent1">
+        <div class="child1">
+          <h1>About Printer</h1>
+          <p>
+            Printers are devices that convert content into copies, on paper or
+            other mediums. The evolution of printers from the century till now
+            has been a journey through generations. In the 1830s Charles Babbage
+            introduced a writing tool, which served as the precursor to
+            printers. Electronic printers made their debut in the mid 20th
+            century with the Teletype Model 28 being a model introduced within
+            the 1950s. Dot matrix printers gained recognition in the 1960s.
+            Coincided with Xerox PARCs development of laser printer generation
+            in the 1970s. In the Nineteen Eighties inkjet printers have been
+            added at the same time as multi-function printers commenced gaining
+            recognition inside the 1990s. The twenty-first century witnessed a
+            revolution with the 3D printing generation making its mark. Today we
+            have an array of printers starting from traditional inkjet and laser
+            printers to reducing part 3-d printing technologies showcasing
+            non-stop improvements in technological innovation.
+          </p>
+        </div>
+        <div class="child2">
+          <img src="./printer2.jpg" class="printer-img" alt="" />
+        </div>
+      </div>
+
+      <div class="parent2">
+        <div class="child1">
+          <div class="slider-container">
+            <div class="slider">
+              <div class="slide">
+                <img src="./printer1.jpg" alt="Image 1" />
+              </div>
+
+              <div class="slide">
+                <img src="./printer3.jpg" alt="Image 3" />
+              </div>
+              <div class="slide">
+                <img src="./printer4.jpg" alt="Image 4" />
+              </div>
+              <div class="slide">
+                <img src="./printer5.jpg" alt="Image 5" />
+              </div>
+
+              <!-- Add more slides as needed -->
+            </div>
+          </div>
+        </div>
+        <div class="child2">
+          <h1>Advantages of printer</h1>
+
+          <ol>
+            <li>
+              Transforming digital data into tangible documents, printers make
+              information more accessible and shareable.
+            </li>
+            <li>
+              Crucial for students to print assignments and study materials.
+            </li>
+            <li>
+              Revolutionizes prototyping and customization, especially with 3D
+              printing.
+            </li>
+            <li>
+              Employees in different locations can print remotely thanks to
+              technology.
+            </li>
+            <li>Excellent for printing images and graphics.</li>
+          </ol>
+
+          <br />
+          <h1 class="secondh1">Disadvantage of printer</h1>
+
+          <ol>
+            <li>
+              The manufacture and disposal of ink and toner can result in
+              pollution, and the use of paper leads to deforestation.
+            </li>
+            <li>Misprints and errors result in resource wastage.</li>
+            <li>Printer malfunctions or technical issues disrupt workflow.</li>
+            <li>Regular maintenance and troubleshooting consume time.</li>
+            <li>Inconveniently loud and noisy</li>
+            <li>Limited paper types, cannot print on glossy photo paper.</li>
+            <li>
+              Sensitive information may be contained in printed documents, which
+              could be dangerous if not handled or discarded improperly.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <footer class="homepage_footer">
+      <div class="footer_container">
+        <div class="footer_sections">
+          <div class="footer_col">
+            <h1 class="LOGO">Printer Haus</h1>
+            <hr>
+            <p class="copyright">
+              Our company aims to provide any <br />
+              and every printer that you may<br />
+              have need for, always.<br />
+              <hr>
+              <div style = "color:white; font-family: PT Sans Caption, sans-serif;">
+              &copy;Printer Haus,2024
+              </div>
+            </p>
+          </div>
+  
+          <div class="footer_col">
+            <h3>shopping</h3>
+            <ul>
+              <li><a href="../Homepage&Research_page/index.html" id="link">home</a></li>
+              <li><a href="../Product_page/indexx.html" id="link" target="blank">product</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer_col">
+            <h3>about us</h3>
+            <ul>
+              <li><a href="../AboutUs&feedback_page/feedbackpage.html" id="link" target="blank">contact</a></li>
+              <li><a href="../AboutUs&feedback_page/aboutUs.html" id="link" target="blank">about us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

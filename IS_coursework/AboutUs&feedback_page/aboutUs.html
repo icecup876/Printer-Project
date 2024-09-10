@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Head consists of meta tags, title, link to external CSS and internal CSS-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keyword" content="Printer Haus, Aastha, Alish, Aprekshya, Seer, Meet the team">
+    <meta name="description"
+        content="Meet the amazing team of Printer Haus. From graduates of NYU to interns of big companies like Google and Microsoft are working here.">
+    <title>About Us - Printer Haus </title>
+    <!--external CSS-->
+    <link rel="stylesheet" href="Main.css">
+    <!--internal CSS-->
+    <style>
+        a {
+            text-decoration: none;
+            color: black,
+        }
+    </style>
+    <!-- font for footer-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!--font for company's description-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* CSS for aboutUs page */
+  
+  /* removes gap between elements in the body */
+  .about_us {
+    margin: 0;
+  }
+  
+  /* styles div intro to align the content within it at the center and maintain space between the container and content */
+  .intro {
+    padding: 150px;
+    height: 150px;
+    text-align: center;
+  }
+  
+  /* set font size of h1 of div class intro, adds margin below the heading  */
+  .intro h1 {
+    font-size: 50px;
+    margin-bottom: 40px;
+  }
+  
+  /* sets size of paragraph of div class intro */
+  .intro p {
+    font-size: 20px;
+  }
+  
+  /* makes the images with class staffimg become round*/
+  .staffimg {
+    border-radius: 100%;
+  }
+  
+  /* image and text appear side by side by using flex display,
+    margin creates space around the div*/
+  .aastha,
+  .aprekshya,
+  .seer,
+  .alish {
+    display: flex;
+    margin: 50px;
+  }
+  
+  /* adds padding to the div and makes image fit in 30% space */
+  .aasthaimage,
+  .aprekshyaimage,
+  .seerimage,
+  .alishimage {
+    padding: 100px;
+    flex: 30%;
+  }
+  
+  /* sets font size, 
+    15px padding for top and bottom, 100px for left and right,
+    flex sets the classes to occupy 70% space,
+    box shadow is 0 for horizontal and vertical shadow, blur effect is 10px, spread radius is 7px 
+    and color of shadow is lightgrey*/
+  .aasthaintro,
+  .aprekshyaintro,
+  .seerintro,
+  .alishintro {
+    font-size: 20px;
+    padding: 15px 100px;
+    flex: 70%;
+    box-shadow: 0px 0px 10px 7px lightgray;
+  }
+  
+  /* words with span elements are made italic with unique font family */
+  .span_name {
+    font-style: italic;
+    font-family: "Courier New", Courier, monospace;
+  }
+  
+  /* sets background color and font size of given div classes */
+  .fastfacts1,
+  .fastfacts2,
+  .fastfacts3,
+  .fastfacts4 {
+    background-color: lavender;
+    font-size: 20px;
+  }
+  
+  /* creates space around heading */
+  .fastfacts1 h2,
+  .fastfacts2 h2,
+  .fastfacts3 h2,
+  .fastfacts4 h2 {
+    padding: 10px;
+  }
+  
+  /*sets distance between borders of cells*/
+  table {
+    border-spacing: 30px;
+  }
+  
+  /*sets box shadow,
+    background colour of cells,
+    height,
+    33% width from the width of parent div,
+    curve around edges of cells */
+  .column {
+    box-shadow: 0px 0px 10px 7px lightgray;
+    background-color: white;
+    height: 200px;
+    width: 33.33%;
+    border-radius: 10px;
+  }
+  
+  /*sets background color, aligns text at center and adds space between border and the content of div class=fbb*/
+  .fbb {
+    background-color: black;
+    text-align: center;
+    padding: 100px;
+  }
+  
+  /*sets font size and text color of heading*/
+  .fbb h1 {
+    font-size: 30px;
+    color: white;
+  }
+  
+  /*sets font size, color and padding at bottom of paragraph*/
+  .fbb p {
+    font-size: 20px;
+    color: white;
+    padding-bottom: 70px;
+  }
+  
+  /*sets border and its color, text color and padding of the button */
+  .white-btn {
+    border: 2px solid white;
+    color: white;
+    padding: 10px;
+  }
+  
+  /*makes background of button white and text black when cursor is at the button*/
+  .white-btn:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  
+  nav {
+    width: 100%px;
+    height: 51px;
+    background-color: #4d243d;
+    border: #4d243d solid;
+    border-radius: 3px;
+  }
+  .nav_div {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1300px;
+    display: flex;
+    height: 55px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .LOGO {
+    color: #cccdce;
+    font-family: "Roboto Slab", serif;
+    font-size: 21px;
+  }
+  .nav_icons_div {
+    width: 25px;
+    height: 35px;
+  }
+  .icons {
+    display: flex;
+  }
+  .nav_icons {
+    color: #cccdce;
+  }
+  .nav_icons_div:hover {
+    background-color: #3a3a3a;
+    transition: 0.3s ease;
+  }
+  .nav_links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .nav_links li {
+    list-style: none;
+    padding: 6px 20px 8px 20px;
+    border-radius: 15px;
+  }
+  
+  #link {
+    color: 242424;
+    font-family: "Oxygen", sans-serif;
+    text-decoration: none;
+    font-size: 12.5px;
+    color: #cccdce;
+  }
+  
+  .nav_links li:hover {
+    background-color: #3a3a3a;
+    transition: 0.25s ease;
+  }
+  .nav_links li:hover #link {
+    color: #fff;
+    transition: 0.25s ease;
+  }
+  /*CSS for footer*/
+  .footer_container {
+    width: 1170px;
+    margin-left: auto;
+  }
+  
+  .footer_sections {
+    display: flex;
+  }
+  .homepage_footer {
+    background-color: #4d243d;
+    height: 200 px;
+    width: 100%;
+    border-style: solid;
+    border-color: #4d243d;
+    border-radius: 5px;
+  }
+  
+  .homepage_footer ul {
+    list-style: none;
+    padding: 10px;
+  }
+  .footer_col {
+    padding: 75px;
+  }
+  
+  .footer_col h3 {
+    text-transform: capitalize; /*Capitalizaes the first letter of the text in h3 element*/
+    font-size: 21px;
+    color: #fff;
+    font-family: "Playfair Display", serif;
+  }
+  
+  .footer_col ul li a {
+    font-size: 17px;
+    text-transform: capitalize;
+    color: white;
+    padding: 0px 0px 10px;
+  }
+  .footer_col ul li a:hover {
+    color: blue;
+    padding-left: 10px;
+    transition: 0.5s;
+  }
+  
+  .footer_col .copyright {
+    color: white;
+    text-align: justify;
+    font-family: "PT Sans Caption", sans-serif;
+  }
+  
+  </style>
+</head>
+
+
+<!--Body consists of various sections with images and information about the team members of the organization-->
+
+<!--inline css used to apply font-family in body-->
+
+<body class="about_us" style="font-family:'Times New Roman', serif;">
+      <!--code for header-->
+  <header>
+    <!--Code for navbar-->
+    <nav>
+      <!--div container of the whole navbar -->
+      <div class="nav_div">
+        <!--name of our logo-->
+        <h1 class="LOGO">Printer Haus</h1>
+        <!--nav links in unordered list-->
+        <ul class="nav_links">
+          
+          <li>
+            <a href="../Homepage&Research_page/index.html" class="home" id="link" target="blank">Home</a>
+          </li>
+          <li>
+            <a href="../Product_page/indexx.html" class="products" id="link" target="blank">Products</a>
+          </li>
+          <li><a href="../Blog_page/Blog.html" class="blog" id="link" targe="blank">Blog</a></li>
+          <li>
+            <a href="../Homepage&Research_page/research.html" class="research" id="link" target="blank"
+              >Research</a
+            >
+           <li>
+            <a href="../AboutUs&feedback_page/aboutUs.html" class="aboutUs" id="link" target="blank"
+                  >About us</a
+            >
+           </li>
+          </li>
+          <li>
+            <a href="../AboutUs&feedback_page/feedbackpage.html" class="contact" id="link" target="blank">Contact</a>
+          </li>
+        </ul>
+        <div class="icons">
+            <!--continer for icons in the navbar-->
+            <div class="nav_icons_div">
+              <img src="../Homepage&Research_page/Images/icons/search_icon.png" style = " width: 30px;
+              height: 35px">
+            </div>
+      
+            <div class="nav_icons_div">
+              <img src="../Homepage&Research_page/Images/icons/cart.png" style = " width: 30px;
+              height: 35px">
+            </div> 
+        </div>
+      </div>
+    </nav>
+
+  </header>
+    <!---- Introduction section has a div with heading and a paragraph ---->
+    <section class="Introduction">
+        <!--inline CSS to make background black and font color white of div class="intro"-->
+        <div class="intro" style="background-color: black; color: white; ">
+            <h1> Meet the team </h1>
+            <p>Let's get to know about our dedicated and passionate team members more closely.</p>
+        </div>
+    </section>
+
+    <!---Elements of div class="aastha"-->
+    <div class="aastha">
+        <!--this div element contains an image-->
+        <div class="aasthaimage">
+            <img class="staffimg" src="images/Aasthaimg.jpg">
+        </div>
+        <!--this div element contains heading and a paragraph about the member and list of skills and education-->
+        <div class="aasthaintro">
+            <!--inline CSS to align heading at center-->
+            <h1 style="text-align: center;">Meet <span class="span_name">Aastha</span></h1>
+            <p>Graduated from NYU in 2015, she is an aspiring web designer. Take a look at her portfolio. </p>
+            <!--use of nested unordered list styled with inline css to make the list bold-->
+            <ul style="font-weight: bold;">
+                <li>Education
+                    <ul>
+                        <li>High Schooling from SXY, Nepal</li>
+                        <li>Bachelor's degree in computer science from NYU, USA</li>
+                    </ul>
+                </li>
+                <li>Skills
+                    <ul>
+                        <li>WebGL</li>
+                        <li>ReactJS</li>
+                        <li>JavaScript</li>
+                        <li>HTML + CSS</li>
+                        <li>3D Modelling</li>
+                        <li>Experience: 4+ years</li>
+                        <li>Hobbies: acting, travelling</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--div class="fastfacts1" has a heading and a table-->
+    <div class="fastfacts1">
+        <!--inline CSS to change heading size and align text at center-->
+        <h2 style="text-align: center; font-size: 50px;">Fast facts</h2>
+        <!--table will occupy entire width inside its container-->
+        <table width="100%">
+            <!--three columns are made in a row and a heading and a paragraph are inserted in each column-->
+            <tr>
+                <th class="column">
+                    <section>
+                        <h3>4</h3>
+                        <p>Hackathons won</p>
+                    </section>
+                </th>
+                <th class="column">
+                    <section>
+                        <h3>2</h3>
+                        <p>movies played</p>
+                    </section>
+                </th>
+                <th class="column">
+                    <section>
+                        <h3>8</h3>
+                        <p>Countries travelled</p>
+                    </section>
+                </th>
+            </tr>
+        </table>
+    </div>
+
+    <!---Div class="alish" has similar elements as div class="aastha"-->
+    <div class="alish">
+        <div class="alishintro">
+            <h1 style="text-align: center;">Meet <span class="span_name">Alish</span></h1>
+            <p> Alish is a talented front-end developer. With experience at working as an intern in Microsoft, he is
+                confident about his skills but he never stops learning new things. Take a look at his portfolio. </p>
+            <ul style="font-weight: bold;">
+                <li>Education
+                    <ul>
+                        <li>High Schooling from SXC, Nepal</li>
+                        <li>Bachelor's degree in computer science from NYU, USA</li>
+                    </ul>
+                </li>
+                <li>Skills
+                    <ul>
+                        <li>Languages: Java, Python, Javascript</li>
+                        <li>Tools: MySQL Workbench, Git</li>
+                        <li>Experience: 4+ years</li>
+                        <li>Editor journey: Sublime, VS Code, Netbeans</li>
+                        <li>Hobbies: Basketball, travelling</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="alishimage">
+            <img class="staffimg" src="images/Alishimg.jpg">
+        </div>
+    </div>
+
+    <!--div class="fastfacts2" has similar structure as div class="fastfacts1"-->
+    <div class="fastfacts2">
+        <!--inline CSS to change heading size and align text at center-->
+        <h2 style="text-align: center; font-size: 50px;">Fast facts</h2>
+        <table width="100%">
+            <tr>
+                <th class="column">
+                    <section>
+                        <h3>3</h3>
+                        <p>Hackathons won</p>
+                    </section>
+                </th>
+                <th class="column">
+                    <section>
+                        <h3>3</h3>
+                        <p>Gold medal in basketball competition</p>
+                    </section>
+                </th>
+                <th class="column">
+                    <section>
+                        <h3>3</h3>
+                        <p>Bikes he owns</p>
+                    </section>
+                </th>
+            </tr>
+        </table>
+    </div>
+
+    <!---div class="aprekshya" has similar elements as div class="aastha"-->
+    <div class="aprekshya">
+        <div class="aprekshyaimage">
+            <img class="staffimg" src="images/Aprekshyaimg.jpg">
+        </div>
+        <div class="aprekshyaintro">
+            <h1 style="text-align: center;">Meet <span class="span_name">Aprekshya</span></h1>
+            <p> Aprekshya is a passionate back-end developer. She was an intern at Amazon for two years and since then
+                she has worked for various amazing projects. Take a look at her portfolio.</p>
+            <ul style="font-weight: bold;">
+                <li>Education
+                    <ul>
+                        <li>High Schooling from SXL, Nepal</li>
+                        <li>Bachelor's degree in computer science from NYU, USA</li>
+                    </ul>
+                </li>
+                <li>Skills
+                    <ul>
+                        <li>Photoshop, InDesign, After Effects, XD</li>
+                        <li>React, NextJS</li>
+                        <li>JavaScript</li>
+                        <li>HTML + CSS</li>
+                        <li>Cinema 4D, Blender</li>
+                        <li>Experience: 5+ years</li>
+                        <li>Hobbies: Dancing, Cooking</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--div class="fastfacts3" has similar structure as div class="fastfacts1"-->
+    <div class="fastfacts3">
+        <!--inline CSS to change heading size and align text at center-->
+        <h2 style="text-align: center; font-size: 50px;">Fast facts</h2>
+        <table width="100%">
+            <tr>
+                <th class="column">
+                    <section>
+                        <h3>4</h3>
+                        <p>Hackathons won</p>
+                    </section>
+                </th>
+                <th class="column">
+                    <section>
+                        <h3>3</h3>
+                        <p>Dance competitions won</p>
+                    </section>
+                </th>
+                <th class="column">
+                    <section>
+                        <h3>5</h3>
+                        <p>Dogs she owns</p>
+                    </section>
+                </th>
+            </tr>
+        </table>
+    </div>
+
+    <!---div class="seer" has similar elements as div class="aastha"-->
+    <div class="seer">
+        <div class="seerintro">
+            <h1 style="text-align: center;">Meet <span class="span_name">Seer</span></h1>
+            <p> Seer is an amazing full-stack web developer. He did an internship at Google for 2 years and has worked
+                for multiple large organizations. Take a look at his portfolio</p>
+            <ul style="font-weight: bold;">
+                <li>Education
+                    <ul>
+                        <li>High Schooling from SXJ, Nepal</li>
+                        <li>Bachelor's degree in computer science from NYU, USA</li>
+                    </ul>
+                </li>
+                <li>Skills
+                    <ul>
+                        <li>React, NextJS</li>
+                        <li>JavaScript</li>
+                        <li>HTML + CSS</li>
+                        <li>Ruby/Rails</li>
+                        <li>Experience: 5+ years</li>
+                        <li>Languages: English, Hindi, Nepali, French, Spanish, Chinese, Japanese</li>
+                        <li>Hobbies: Chess, online gaming</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="seerimage">
+            <img class="staffimg" src="images/Seerimg.jpg">
+        </div>
+    </div>
+
+    <!--div class="fastfacts4" has similar structure as div class="fastfacts1"-->
+    <div class="fastfacts4">
+        <!--inline CSS to change heading size and align text at center-->
+        <h2 style="text-align: center; font-size: 50px;">Fast facts</h2>
+        <table width="100%">
+            <tr>
+                <th class="column">
+                    <section>
+                        <h3>4</h3>
+                        <p>Gold medal in Chess</p>
+                    </section>
+                </th>
+                <th class="column">
+                    <section>
+                        <h3>7</h3>
+                        <p>Languages he can speak</p>
+                    </section>
+                </th>
+                <th class="column">
+                    <section>
+                        <h3>5</h3>
+                        <p>Hackathons won</p>
+                    </section>
+                </th>
+            </tr>
+        </table>
+    </div>
+
+    <!--this div consists of a heading, paragraph and a feedback button that will take you to feedback page in new tab-->
+    <div class="fbb">
+        <h1> Our team would love to hear your suggestions. </h1>
+        <p>It will take you only few seconds to fill this form.</p>
+        <a href="feedbackpage.html" class="white-btn" target="_blank">CLICK HERE</a>
+    </div>
+    <footer class="homepage_footer">
+      <div class="footer_container">
+        <div class="footer_sections">
+          <div class="footer_col">
+            <h1 class="LOGO">Printer Haus</h1>
+            <hr>
+            <p class="copyright">
+              Our company aims to provide any <br />
+              and every printer that you may<br />
+              have need for, always.<br />
+              <hr>
+              <div style = "color:white; font-family: PT Sans Caption, sans-serif;">
+                &copy;Printer Haus,2024
+              </div>
+            </p>
+          </div>
+
+          <div class="footer_col">
+            <h3>shopping</h3>
+            <ul>
+              <li><a href="index.html" id="link">home</a></li>
+              <li><a href="../Product_page/indexx.html" id="link" target="blank">product</a></li>
+            </ul>
+          </div>
+
+          <div class="footer_col">
+            <h3>about us</h3>
+            <ul>
+              <li><a href="../AboutUs&feedback_page/feedbackpage.html" id="link" target="blank">contact</a></li>
+              <li><a href="../AboutUs&feedback_page/aboutUs.html" id="link" target="blank">about us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

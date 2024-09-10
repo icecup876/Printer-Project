@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!-- tells the browser what kind of file to expect -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content = "width = device-width", initial-scale =1.0">
+    <meta name="author"  content="Seer Pant"/>
+
+    <title>Printer Haus</title>
+    <link rel="stylesheet" href="main.css" />
+    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+      rel="stylesheet"
+    />
+    <!--font for product title in product card-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <!--font for product description in product card-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font for footer-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!--font for logo name-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <!--font for product price-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!--font for links-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!--font for company's message-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /*inline CSS of image slider*/
+      .slider {
+        width: 1505px; /*setting width of the image slider*/
+        box-sizing: border-box; /*causes border and padding to be included in the width so that 
+                                different images do not appear to be of different sizes*/
+        overflow: hidden; /*clipps out the part of image that is overflowing out of the container*/
+        box-shadow: 3px 3px 19px black; /*adding box shadow to the top right and bottom*/
+        border-radius: 5px; /*adds radius to edges of the border*/
+        height: 500px; /*height of the image slider*/
+        margin: 20px auto; /*centers the slider horizontally in the centre*/
+        
+      }
+      /*inline CSS of image in the slider*/
+      img {
+        width: 100%; /*setting up the image to cover whole width of the image slider*/
+        height: 100%; /*setting up the image to cover the whole height of the image slider*/
+         /*setting up the image to */
+        object-fit: contain;
+      }
+    </style> 
+  </head>
+
+  <!-- Inline javascript -->
+  <script>
+    /*JavaSCript to alert the user that they have added an item to the cart*/
+    function clickFunc() {
+      alert("The item has been added to the cart");
+    }
+  </script>
+  
+  <!--coding body of the homepage-->
+  <body>
+    <!--code for header-->
+    <header>
+      <!--Code for navbar-->
+      <nav>
+        <!--div container of the whole navbar -->
+        <div class="nav_div">
+          <!--name of our logo-->
+          <h1 class="LOGO">Printer Haus</h1>
+          <!--nav links in unordered list-->
+          <ul class="nav_links">
+            
+            <li>
+              <a href="index.html" class="home" id="link" target="blank">Home</a>
+            </li>
+            <li>
+              <a href="../Product_page/indexx.html" class="products" id="link" target="_blank">Products</a>
+            </li>
+            <li><a href="../Blog_page/Blog.html" class="blog" id="link" target="_blank">Blog</a></li>
+            <li>
+              <a href="../Homepage&Research_page/research.html" class="research" id="link" target="_blank"
+                >Research</a
+              >
+            </li>
+            <li>
+              <a href="../AboutUs&feedback_page/aboutUs.html" class="aboutUs" id="link" target="_blank"
+                >About us</a
+              >
+            </li>
+            <li>
+              <a href="../AboutUs&feedback_page/feedbackpage.html" class="contact" id="link" target="_blank">Contact</a>
+            </li>
+          </ul>
+          <div class="icons">
+              <!--continer for icons in the navbar-->
+              <div class="nav_icons_div">
+                <img src="Images\icons\search_icon.png">
+              </div>
+        
+              <div class="nav_icons_div">
+                <img src="Images\icons\cart.png">
+              </div> 
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--specifying theis is the main content of the webpage-->
+    <main>
+      <div class="slider" id="img">
+        <!--specifying the path of the image-->
+        <img src="Images\printers\H.png" />
+      </div>
+      <!--coding product card-->
+      <div class="card_container">
+        <!--container containing all the details of the card-->
+        <div class="card">
+          <!--container holding image of the product-->
+          <div class="card_img">
+            <img src="Images\product_card_printers\richo_aficio.png" />
+          </div>
+          <!--container for product name-->
+          <div class="product_name">Richo aficio 3510SF <hr> </div>
+          <!--container for product's description-->
+          <div class="product_description">All-In-One Printer (Print, Copy, Scan) </div>
+           <!--container for buying and selling products-->
+          <div class="shopping">
+            <div class="product_price">Rs.75,00</div>
+            <!--button with JS to add product into a cart-->
+            <button class="cart_button" onClick="clickFunc()">
+              Add to cart
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card_img">
+            <div class="img">
+              <img src="Images\product_card_printers\PANTUM_MW.png" />
+            </div>
+          </div>
+            <div class="product_name">Pantum M6550NW<hr></div>
+            <div class="product_description">Mono laser Multifunction Printer.</div>
+            <div class="shopping">
+            <div class="product_price">Rs. 55,000</div>
+            <button class="cart_button" onClick="clickFunc()">
+              Add to cart
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card_img">
+            <div class="img">
+              <img src="Images\product_card_printers\MG2570S.png"/>
+            </div>
+          </div>
+          <div class="product_name">Canon MG2570S<hr></div>
+          <div class="product_description">All in one printer.</div>
+          <br>
+          <div class="shopping">
+           <div class="product_price">Rs. 30,000</div>
+           <button class="cart_button" onClick="clickFunc()">
+           Add to cart
+           </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card_img">
+            <div class="img">
+              <img src="Images\product_card_printers\LaserJetProM15W .png"  style="width:240px; height:220px;"/>
+            </div>
+          </div>
+          <div class="product_name">LaserJetProM15W <hr></div>
+          <div class="product_description">Canon LaserJet Pro M15w wireless Laser Printer </div>
+          <br>
+          <div class="shopping">
+            <div class="product_price">Rs. 45,000</div>
+            <button class="cart_button" onClick="clickFunc()">
+             Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="JavaScript/imageSlider.js"></script>
+    
+    <!-- footer of the homepage-->
+    <footer class="homepage_footer">
+      <div class="footer_container">
+        <div class="footer_sections">
+          <div class="footer_col">
+            <h1 class="LOGO">Printer Haus</h1>
+            <hr>
+            <p class="copyright">
+              Our company aims to provide any <br />
+              and every printer that you may<br />
+              have need for, always.<br />
+              <hr>
+              <div style = "color:white; font-family: PT Sans Caption, sans-serif;">
+                &copy;Printer Haus,2024
+              </div>
+            </p>
+          </div>
+
+          <div class="footer_col">
+            <h3>shopping</h3>
+            <ul>
+              <li><a href="index.html" id="link">home</a></li>
+              <li><a href="../Product_page/indexx.html" id="link" target="_blank">product</a></li>
+            </ul>
+          </div>
+
+          <div class="footer_col">
+            <h3>about us</h3>
+            <ul>
+              <li><a href="../AboutUs&feedback_page/feedbackpage.html" id="link" target="blank">contact</a></li>
+              <li><a href="../AboutUs&feedback_page/aboutUs.html" id="link" target="blank">about us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

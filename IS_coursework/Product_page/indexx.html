@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="style.css" rel="stylesheet" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+       <!-- font for footer-->
+       <link
+       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
+       rel="stylesheet"
+     />
+     <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!--font for company's description-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+  
+      .container {
+        width: 55%;
+        margin: 0 auto;
+      }
+  
+      .products-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+  
+      .product {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+      .product:hover {
+        transform: scale(1.05);
+      }
+  
+      .product img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+      }
+  
+      .product-info {
+        margin-top: 20px;
+      }
+  
+      .product-info h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+  
+      .product-info p {
+        color: #555;
+      }
+  
+      .price {
+        font-size: 1.2em; 
+        color: #e44d26;
+        margin-top: 10px;
+      }
+  
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #e44d26;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+      }
+  
+      .btn:hover {
+        background-color: #333;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+      .hero {
+        width: 100%;
+      }
+      .row {
+        width: 90%;
+        height: 100vh;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .col {
+        flex-basis: 45%;
+      }
+      .slider {
+        height: 40vh;
+        display: flex;
+        width: 100vh;
+        gap: 2vh;
+      }
+  
+      .product img:hover {
+        opacity: 1;
+      }
+  
+      .preview img {
+        height: auto;
+        margin-top: -60px;
+      }
+      p {
+        margin-bottom: 20px;
+      }
+      .brand {
+        background: #008000;
+        width: fit-content;
+        color: #fff;
+        font-size: 12px;
+        padding: 2px 5px;
+      }
+      h2 {
+        font-size: 45px;
+        color: #555;
+        margin-bottom: 20px;
+      }
+      .rating {
+        display: flex;
+        height: 15px;
+      }
+      .rating .fa {
+        color: #008000;
+      }
+      .price {
+        color: #fe980f;
+        font-size: 26px;
+        font-weight: bold;
+        padding-top: 10px;
+      }
+      input {
+        width: 80px;
+        border: 1px solid #ccc;
+        font-weight: bold;
+        text-align: center;
+      }
+      button {
+        color: #fff;
+        font-size: 15px;
+        outline: none;
+        border: 0;
+        border-radius: 5px;
+        background: #fe980f;
+        padding: 10px 15px;
+        box-sizing: border-box;
+        cursor: pointer;
+      }
+      button .fa {
+        margin-right: 10px;
+      }
+      .prod img {
+        height: 19vh;
+        margin-bottom: 9px;
+        cursor: pointer;
+        opacity: 0.6;
+      }
+    </style>
+  
+    <style>
+      nav {
+        width: 100%;
+        height: 51px;
+        background-color: #4d243d;
+        border: #4d243d solid;
+        border-radius: 3px;
+      }
+      .nav_div {
+        margin-left: auto;
+        margin-right: auto;
+        width: 1300px;
+        display: flex;
+        height: 55px;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .LOGO {
+        color: #cccdce;
+        font-family: "Roboto Slab", serif;
+        font-size: 21px;
+      }
+      .nav_icons_div {
+        width: 25px;
+        height: 35px;
+      }
+      .icons {
+        display: flex;
+      }
+      .nav_icons {
+        color: #cccdce;
+      }
+      .nav_icons_div:hover {
+        background-color: #3a3a3a;
+        transition: 0.3s ease;
+      }
+      .nav_links {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .nav_links li {
+        list-style: none;
+        padding: 6px 20px 8px 20px;
+        border-radius: 15px;
+      }
+  
+      #link {
+        color: 242424;
+        font-family: "Oxygen", sans-serif;
+        text-decoration: none;
+        font-size: 12.5px;
+        color: #cccdce;
+      }
+  
+      .nav_links li:hover {
+        background-color: #3a3a3a;
+        transition: 0.25s ease;
+      }
+      .nav_links li:hover #link {
+        color: #fff;
+        transition: 0.25s ease;
+      }
+    </style>
+  
+    <style>
+      /*CSS for footer*/
+  .footer_container {
+    width: 1170px;
+    margin-left: auto;
+  }
+  
+  .footer_sections {
+    display: flex;
+  }
+  .homepage_footer {
+    color: aqua;
+    background-color: #4d243d;
+    height: 325px;
+    width: 100%;
+    border-style: solid;
+    border-color: #4d243d;
+    border-radius: 5px;
+  }
+  
+  .homepage_footer ul {
+    list-style: none;
+    padding: 10px;
+  }
+  .footer_col {
+    padding: 75px;
+  }
+  
+  .footer_col h3 {
+    text-transform: capitalize; /*Capitalizaes the first letter of the text in h3 element*/
+    font-size: 21px;
+    color: #fff;
+    font-family: "Playfair Display", serif;
+  }
+  
+  .footer_col ul li a {
+    font-size: 17px;
+    text-transform: capitalize;
+    color: white;
+    padding: 0px 0px 10px;
+  }
+  .footer_col ul li a:hover {
+    color: blue;
+    padding-left: 10px;
+    transition: 0.5s;
+  }
+  
+  .footer_col .copyright {
+    color: white;
+    text-align: justify;
+    font-family: "PT Sans Caption", sans-serif;
+  }
+  </style>
+  </head>
+  <title>Product Page</title>
+ 
+
+
+
+  <body>
+    <header>
+      <!--Code for navbar-->
+      <nav>
+        <!--div container of the whole navbar -->
+        <div class="nav_div">
+          <!--name of our logo-->
+          <h1 class="LOGO">Printer Haus</h1>
+          <!--nav links in unordered list-->
+          <ul class="nav_links">
+            <li>
+              <a href="../Homepage&Research_page/index.html" class="home" id="link" target="blank">Home</a>
+            </li>
+            <li>
+              <a
+                href="../Product_page/indexx.html"
+                class="products"
+                id="link"
+                target="blank"
+                >Products</a
+              >
+            </li>
+            <li>
+              <a
+                href="../Blog_page/Blog.html"
+                class="blog"
+                id="link"
+                target="blank"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a href="../Homepage&Research_page/research.html" class="research" id="link" target="blank"
+                >Research</a
+              >
+            </li>
+            <li>
+              <a
+                href="../AboutUs&feedback_page/aboutUs.html"
+                class="aboutUs"
+                id="link"
+                target="blank"
+                >About us</a
+              >
+            </li>
+            <li>
+              <a
+                href="../AboutUs&feedback_page/feedbackpage.html"
+                class="contact"
+                id="link"
+                target="blank"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <div class="icons">
+            <!--continer for icons in the navbar-->
+            <div class="nav_icons_div">
+              <img src="../Homepage&Research_page/Images/icons/search_icon.png" style = " width: 30px;
+              height: 35px">
+            </div>
+  
+            <div class="nav_icons_div">
+              <img src="../Homepage&Research_page/Images/icons/cart.png" style = " width: 30px;
+              height: 35px"/>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="hero">
+      <div class="row">
+        <div class="col">
+          <div class="slider">
+            <div class="preview">
+              <img src="images/canon 4.jpg" id="imagebox" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="content">
+            <p class="brand">Brand: Canon</p>
+            <h2>Canon Pixma Mg2525 All-In-One Inkjet Printer Extra</h2>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <p class="price">Brand: Canon</p>
+            <p>
+              Size:
+              <select name="size">
+                <option value="select size">select size</option>
+                <option value="small">small</option>
+                <option value="medium">medium</option>
+                <option value="large">large</option>
+              </select>
+            </p>
+            <p>Quantity: <input type="text" value="1" /></p>
+            <button type="button">
+              <i class="fa fa-shopping-cart"></i>
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container products-container">
+      <!-- Product 1 -->
+      <div class="product">
+        <img src="images/product 1.jpg" alt="Product 1 Image" />
+        <div class="product-info">
+          <h2>PANTUM M6550NW</h2>
+          <p>Pantum M6550NW Mono laser Multifunction Printer.</p>
+          <p class="price">Rs. 55,000</p>
+          <a href="#" class="btn">Add to Cart</a>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product">
+        <img src="images/product 2.jpg" alt="Product 2 Image" />
+        <div class="product-info">
+          <h2>XP312</h2>
+          <p>Epson xp312 All in one printer.</p>
+          <p class="price">Rs.75,000</p>
+          <a href="#" class="btn">Add to Cart</a>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product">
+        <img src="images/product 3.jpg" alt="Product 3 Image" />
+        <div class="product-info">
+          <h2>DCP-T220</h2>
+          <p>
+            Brother DCP-T220 All in One / Color Inkjet Printer with Ink Tank
+            System.
+          </p>
+          <p class="price">Rs. 70,000</p>
+          <a href="#" class="btn">Add to Cart</a>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product">
+        <img src="images/product 4.jpg" alt="Product 4 Image" />
+        <div class="product-info">
+          <h2>Pantum M6550NW</h2>
+          <p>Pantum M6550NW Mono laser Multifunction Printer.</p>
+          <p class="price">Rs. 55,000</p>
+          <a href="#" class="btn">Add to Cart</a>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product">
+        <img src="images/product 5.jpg" alt="Product 5 Image" />
+        <div class="product-info">
+          <h2>MG2570S</h2>
+          <p>Canon MG2570S Low Cost All-In-One Printer - 1 Year Warranty.</p>
+          <p class="price">Rs. 30,000</p>
+          <a href="#" class="btn">Add to Cart</a>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product">
+        <img src="images/product 6.jpg" alt="Product 6 Image" />
+        <div class="product-info">
+          <h2>LaserJet Pro M15w</h2>
+          <p>Canon LaserJet Pro M15w - Wireless Laser Printer - White.</p>
+          <p class="price">Rs. 45,000</p>
+          <a href="#" class="btn">Add to Cart</a>
+        </div>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="product">
+        <img src="images/product 7.jpg" alt="Product 7 Image" />
+        <div class="product-info">
+          <h2>PIXMA MG2570s</h2>
+          <p>
+            PIXMA MG2570s All in One Printer Low-Cost Cartridges - 1 Year
+            Warranty.
+          </p>
+          <p class="price">Rs. 65,000</p>
+          <a href="#" class="btn">Add to Cart</a>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="product">
+        <img src="images/product 8.jpg" alt="Product 8 Image" />
+        <div class="product-info">
+          <h2>Ricoh Aficio SP 3510SF</h2>
+          <p>
+            Ricoh Aficio SP 3510SF Printer, All-In-One Printer (Print, Copy,
+            Scan)
+          </p>
+          <p class="price">Rs. 75,000</p>
+          <a href="#" class="btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+    <footer class="homepage_footer">
+      <div class="footer_container">
+        <div class="footer_sections">
+          <div class="footer_col">
+            <h1 class="LOGO">Printer Haus</h1>
+            <hr>
+            <br>
+            <p class="copyright">
+              Our company aims to provide any <br />
+              and every printer that you may<br />
+              have need for, always.<br />
+              <hr>
+              <div style = "color:white; font-family: PT Sans Caption, sans-serif;">
+              &copy;Printer Haus,2024
+              </div>
+            </p>
+          </div>
+      
+          <div class="footer_col">
+            <h3>shopping</h3>
+            <ul>
+              <li><a href="../Homepage&Research_page/index.html" id="link">home</a></li>
+              <li><a href="#" id="link" target="blank">product</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer_col">
+            <h3>about us</h3>
+            <ul>
+              <li><a href="../AboutUs&feedback_page/feedbackpage.html" id="link" target="blank">contact</a></li>
+              <li><a href="../AboutUs&feedback_page/aboutUs.html" id="link" target="blank">about us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    function clickme(smallImg) {
+      var fullImg = document.getElementById("imagebox");
+      fullImg.src = smallImg.src;
+    }
+  </script>
+</html>
